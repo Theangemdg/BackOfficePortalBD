@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Portal-admin</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="../vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="../css/navigation.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/a58c9592f7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="../html/menuPrincipal.html"
+        >
+          <img src="../img/Portal_logo2.png" alt="" width="100%" />
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-1" />
+
+        <!-- Nav Item - app motoristas -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-motorcycle"></i>
+            <span>App de motoristas</span>
+          </a>
+        </li>
+        <!-- Nav Item - app clientes -->
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost/Portal-Frontend-clientesBD/Htmls/">
+            <i class="fas fa-user"></i>
+            <span>App de clientes</span>
+          </a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-1" />
+
+        <!-- Nav Item -->
+        <li class="nav-item">
+          <a class="nav-link" href="../html/adminCategories.html">
+            <i class="fas fa-tags"></i>
+            <span>Administrar categorias</span>
+          </a>
+        </li>
+
+        <!-- Nav Item -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-motorcycle"></i>
+            <span>Administrar motoristas</span>
+          </a>
+        </li>
+
+        <!-- Nav Item -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-clipboard-list"></i>
+            <span>Administrar ordenes</span>
+          </a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-1" />
+
+        <!-- Nav Item -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            data-toggle="modal"
+            data-target="#logoutModal"
+          >
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Salir</span>
+          </a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-1 d-none d-md-block" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center mt-3 d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Title -->
+            <a
+              href="../html/adminProductos.html"
+              class="border-0 fa-solid fa-arrow-left-long"
+              style="font-size: 35px; color: #5a5c69"
+            ></a>
+            <h1 class="h3 m-4 text-gray-800">Nuevo Producto</h1>
+
+            <form
+              class="g-3 needs-validation"
+              action=""
+              method="POST"
+              novalidate
+            >
+              <div class="m-4 position-relative">
+                <label for="nombre" class="form-label"
+                  >Nombre del producto</label
+                >
+                <input
+                  type="text"
+                  class="form-control needs-validation"
+                  id="nombre"
+                  name="nombre"
+                  required
+                />
+                <!-- Mensajes para validación   -->
+                <div class="valid-feedback">Campo valido!</div>
+                <div class="invalid-feedback">Campo invalido.</div>
+              </div>
+              <div class="m-4 position-relative">
+                <label for="imagen" class="form-label">Insertar imagen</label>
+                <input
+                  type="text"
+                  class="form-control needs-validation"
+                  id="imagen"
+                  name="imagen"
+                  required
+                />
+                <!-- Mensajes para validación   -->
+                <div class="valid-feedback">Campo valido!</div>
+                <div class="invalid-feedback">Campo invalido.</div>
+              </div>
+              <div class="m-4 position-relative">
+                <label for="precio" class="form-label">Precio</label>
+                <input
+                  type="text"
+                  class="form-control needs-validation"
+                  id="precio"
+                  name="precio"
+                  required
+                />
+                <!-- Mensajes para validación   -->
+                <div class="valid-feedback">Campo valido!</div>
+                <div class="invalid-feedback">Campo invalido.</div>
+              </div>
+              <div class="m-4 position-relative">
+                <label for="descripcion" class="form-label">Descripcion</label>
+                <input
+                  type="text"
+                  class="form-control needs-validation"
+                  id="descripcion"
+                  name="descripcion"
+                  required
+                />
+                <!-- Mensajes para validación   -->
+                <div class="valid-feedback">Campo valido!</div>
+                <div class="invalid-feedback">Campo invalido.</div>
+              </div>
+              <div class="row m-4 justify-content-center">
+                <button
+                  class="col-xl-4 btn btn-info fw-bold mt-5 px-5"
+                  type="button"
+                  name="guardarCategoria"
+                  onclick="guardarProducto()"
+                >
+                  Guardar
+                </button>
+                <!--<a class="btn btn-secondary fw-bold float-end m-3 px-5" href="adminCategories.html">Cancelar</a>-->
+              </div>
+            </form>
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Portal 2022</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              ¿Listo para irte?
+            </h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Selecciona "salir" si quieres cerrar tu sesión.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <a class="btn btn-info" href="../html/index.html">Salir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/nuevo-producto.js"></script>
+    <script src="../js/sb-admin-2.min.js"></script>
+
+    <script src="../js/validation.js"></script>
+  </body>
+</html>
