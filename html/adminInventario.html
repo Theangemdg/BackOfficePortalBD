@@ -74,7 +74,7 @@
 
         <!-- Nav Item -->
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="../html/adminEmpleados.html">
             <i class="fas fa-motorcycle"></i>
             <span>Administrar empleados</span>
           </a>
@@ -82,7 +82,7 @@
 
         <!-- Nav Item -->
         <li class="nav-item">
-          <a class="nav-link" href="../html/adminOrdenes.html">
+          <a class="nav-link" href="../html/adminOrdenes.hmtl">
             <i class="fas fa-clipboard-list"></i>
             <span>Administrar ordenes</span>
           </a>
@@ -164,16 +164,16 @@
             <div
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
-              <h1 class="h3 mb-1 text-gray-800">Administrar empleados</h1>
-              <a href="../html/newEmpleado.html" class="btn btn-info shadow-sm"
-                >Nuevo empleado</a
+              <h1 class="h3 mb-1 text-gray-800">Administrar inventario</h1>
+              <a href="../html/newIngrediente.html" class="btn btn-info shadow-sm"
+                >Nuevo ingrediente</a
               >
             </div>
 
             <!-- DataTales -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-info">Empleados</h6>
+                <h6 class="m-0 font-weight-bold text-info">Inventario</h6>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -186,29 +186,23 @@
                     <thead>
                       <tr>
                         <th>Id</th>
-                        <th>Tipo de empleado</th>
-                        <th>Nombre del empleado</th>
-                        <th>Apellido del empleado</th>
-                        <th>Edad</th>
-                        <th>Telefono</th>
-                        <th>Correo</th>
-                        <th>Fecha de contratacion</th>
+                        <th>Nombre</th>
+                        <th>Fecha de vencimiento</th>
+                        <th>Proveedor</th>
+                        <th>Cantidad disponible</th>
                         <th>Opciones</th>
                       </tr>
                     </thead>
-                    <tbody id="bodyempleados">
+                    <tbody id="bodyinventario">
                       <!--aqui se listan las categorias-->
                     </tbody>
                     <tfoot>
                       <tr>
                         <th>Id</th>
-                        <th>Tipo de empleado</th>
-                        <th>Nombre del empleado</th>
-                        <th>Apellido del empleado</th>
-                        <th>Edad</th>
-                        <th>Telefono</th>
-                        <th>Correo</th>
-                        <th>Fecha de contratacion</th>
+                        <th>Nombre</th>
+                        <th>Fecha de vencimiento</th>
+                        <th>Proveedor</th>
+                        <th>Cantidad disponible</th>
                         <th>Opciones</th>
                       </tr>
                     </tfoot>
@@ -291,7 +285,7 @@
     <!-- Custom scripts for all pages-->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="../js/controlador-empleados.js"></script>
+    <script src="../js/controlador-inventario.js"></script>
     <script src="../js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
