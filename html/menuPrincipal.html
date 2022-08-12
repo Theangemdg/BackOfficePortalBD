@@ -18,6 +18,10 @@
       rel="stylesheet"
       type="text/css"
     />
+    <script
+      src="https://kit.fontawesome.com/a58c9592f7.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
       rel="stylesheet"
@@ -48,13 +52,6 @@
         <!-- Divider -->
         <hr class="sidebar-divider my-1" />
 
-        <!-- Nav Item - app motoristas -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-motorcycle"></i>
-            <span>App de motoristas</span>
-          </a>
-        </li>
         <!-- Nav Item - app clientes -->
         <li class="nav-item">
           <a
@@ -79,9 +76,9 @@
 
         <!-- Nav Item -->
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="../html/adminEmpleados.html">
             <i class="fas fa-motorcycle"></i>
-            <span>Administrar motoristas</span>
+            <span>Administrar empleados</span>
           </a>
         </li>
 
@@ -90,6 +87,14 @@
           <a class="nav-link" href="#">
             <i class="fas fa-clipboard-list"></i>
             <span>Administrar ordenes</span>
+          </a>
+        </li>
+
+        <!-- Nav Item -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <span>inventario</span>
           </a>
         </li>
 
@@ -187,7 +192,7 @@
                 <div class="text-center text-danger h2">
                   <p>
                     Añade, edita o elimina <br />
-                    categorias, empresas o productos
+                    categorias o productos
                   </p>
                 </div>
               </div>
@@ -218,8 +223,8 @@
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
                         <div class="h4 mt-2 font-weight-bold text-danger">
-                          <a href="#" class="text-danger"
-                            >Administrar motoristas</a
+                          <a href="../html/adminEmpleados.html" class="text-danger"
+                            >Administrar empleados</a
                           >
                         </div>
                       </div>
@@ -235,8 +240,8 @@
               <div class="col-xl-3 m-3">
                 <div class="text-center text-danger h2">
                   <p>
-                    Aprueba nuevos <br />
-                    motoristas
+                    Administra los <br />
+                    empleados
                   </p>
                 </div>
               </div>
@@ -285,10 +290,7 @@
               <!-- Text -->
               <div class="col-xl-3 m-3">
                 <div class="text-center text-danger h2">
-                  <p>
-                    Controla todas las<br />ordenes y que motoristas<br />harán
-                    los envios.
-                  </p>
+                  <p>Controla todas las<br />ordenes</p>
                 </div>
               </div>
 
@@ -300,6 +302,51 @@
                       class="img-fluid mt-3 mb-4"
                       style="width: 30rem"
                       src="../img/undraw_booked_re_vtod.svg"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="row d-flex flex-row justify-content-around align-items-center"
+            >
+              <!-- Card -->
+              <div class="col-xl-4 col-md-6 m-2">
+                <div class="card border-left-info shadow h-100 py-3">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <div class="h4 mt-2 font-weight-bold text-danger">
+                          <a href="#" class="text-danger">Inventario</a>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <i
+                          class="fas fa-clipboard-list fa-3x text-gray-300"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Text -->
+              <div class="col-xl-3 m-3">
+                <div class="text-center text-danger h2">
+                  <p>Visualiza todo el<br />inventario</p>
+                </div>
+              </div>
+
+              <!-- Illustrations -->
+              <div class="col-xl-3 m-3">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img
+                      class="img-fluid mt-3 mb-4"
+                      style="width: 30rem"
+                      src="../img/undraw_bookshelves_re_lxoy.svg"
                       alt="..."
                     />
                   </div>
