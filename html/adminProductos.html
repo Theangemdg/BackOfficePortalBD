@@ -36,7 +36,14 @@
       rel="stylesheet"
     />
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
     <link href="../css/navigation.css" rel="stylesheet" />
+    <link href="../css/cardReceta.css" rel="stylesheet" />
   </head>
 
   <body id="page-top">
@@ -58,16 +65,12 @@
         <!-- Divider -->
         <hr class="sidebar-divider my-1" />
 
-        <!-- Nav Item - app motoristas -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-motorcycle"></i>
-            <span>App de motoristas</span>
-          </a>
-        </li>
         <!-- Nav Item - app clientes -->
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost/Portal-Frontend-clientesBD/Htmls/">
+          <a
+            class="nav-link"
+            href="http://localhost/Portal-Frontend-clientesBD/Htmls/"
+          >
             <i class="fas fa-user"></i>
             <span>App de clientes</span>
           </a>
@@ -86,17 +89,25 @@
 
         <!-- Nav Item -->
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="../html/adminEmpleados.html">
             <i class="fas fa-motorcycle"></i>
-            <span>Administrar motoristas</span>
+            <span>Administrar empleados</span>
           </a>
         </li>
 
         <!-- Nav Item -->
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="../html/adminOrdenes.html">
             <i class="fas fa-clipboard-list"></i>
             <span>Administrar ordenes</span>
+          </a>
+        </li>
+
+        <!-- Nav Item -->
+        <li class="nav-item">
+          <a class="nav-link" href="../html/adminInventario.html">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <span>inventario</span>
           </a>
         </li>
 
@@ -221,6 +232,67 @@
           <!-- /.container-fluid -->
         </div>
         <!-- End of Main Content -->
+
+        <!-- Modal Receta-->
+        <div
+          class="modal fade"
+          id="modalReceta"
+          tabindex="-1"
+          aria-labelledby="modalRecetaLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-color" id="modalRecetaLabel">
+                  Receta
+                </h5>
+                <button
+                  type="button"
+                  class="fa-solid fa-xmark border-0"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body pl-5 pr-5" id="recetaBody">
+                <!--aqui es donde se va a renderizar las card por cada producto-->
+                <div class="card">
+                  <img
+                    src="../img/PizzaPeperoni.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-color">Pizza de peperoni</h5>
+                    <div class="d-flex justify-content-around mb-5">
+                      <div class="d-flex flex-column">
+                        <p class="fs-4 text-color">Servir</p>
+                        <p class="card-text">4 Personas</p>
+                      </div>
+                      <div class="d-flex flex-column">
+                        <p class="fs-4 text-color">Prep.Time</p>
+                        <p class="card-text">30 minutos</p>
+                      </div>
+                    </div>
+                    <h5 class="card-title mb-0 mt-2 text-color">
+                      Ingredientes
+                    </h5>
+                  </div>
+                  <ul
+                    class="list-group list-group-flush rounded rounded-5 p-3"
+                    id="ingredientes"
+                  >
+                    <!--aqui se va a renderizar los ingredientes de la receta-->
+                    <li class="list-group-item listitem">An item</li>
+                    <li class="list-group-item listitem">A second item</li>
+                    <li class="list-group-item listitem">A third item</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
 
         <!-- Footer -->
         <footer class="sticky-footer bg-white">

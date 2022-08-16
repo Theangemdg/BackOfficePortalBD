@@ -35,6 +35,14 @@ function llenarTablaProductos() {
                     <button class="btn btn-danger" onclick="eliminarProducto('${i}')">
                         <i class="fas fa-trash-alt"></i>
                     </button>
+                    <button
+                      type="button"
+                      class="btn btn-info"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalReceta"
+                    >
+                      Receta
+                    </button>
                 </td>
             </tr>
             `;
