@@ -11,18 +11,19 @@ function llenarTablaCategories() {
     method: "get",
     responseType: "json",
   }).then((res) => {
+      console.log(res)
       document.getElementById("bodycategories").innerHTML = "";
       for (let i = 0; i < res.data.length; i++) {
         document.getElementById("bodycategories").innerHTML += `
             <tr>
-                <td>${res.data[i].id}</td>
+                <td>${res.data[i].id_categoria}</td>
                 <td><img src="${res.data[i].icono}" alt="" height="30px"></td>
                 <td>${res.data[i].nombreCategoria}</td>
                 <td>
-                    <a class="btn btn-info" href="../html/editarCategoria.html" onclick="categoriaSeleccionada(${i})">
+                    <a class="btn btn-info" href="../html/editarCategoria.html" onclick="categoriaSeleccionada(${res.data[i].id_categoria})">
                         <i class="fas fa-pen"></i>
                     </a>
-                    <button class="btn btn-danger" onclick="eliminarCategoria(${i})">
+                    <button class="btn btn-danger" onclick="eliminarCategoria(${res.data[i].id_categoria})">
                         <i class="fas fa-trash-alt"></i>
                     </button>
                 </td>

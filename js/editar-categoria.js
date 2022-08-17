@@ -8,23 +8,24 @@ document.getElementById("userDropdown").innerHTML = `
 var categoriaActiva = JSON.parse(
   sessionStorage.getItem("Categoria Seleccionada")
 );
+console.log(categoriaActiva);
 document.getElementById("nombre").value = categoriaActiva.nombreCategoria;
 document.getElementById("descripcion").value = categoriaActiva.icono;
 
 axios({
   url:
-    "http://localhost/Backend-portalBD/api/categorias.php?id=" +
-    (categoriaActiva.id - 1),
+    "http://localhost/Backend-portalBD/api/productos.php?id=" +
+    categoriaActiva.id_categoria,
   method: "get",
   responseType: "json",
 })
   .then((res) => {
-    console.log(res);
+    console.log(res.data);
     document.getElementById("producto").innerHTML = "";
-    for (let i = 0; i < res.data.productos.length; i++) {
+    for (let i = 0; i < res.data.length; i++) {
       document.getElementById(
         "producto"
-      ).innerHTML += `<option value="${i}">${res.data.productos[i].nombreProducto}</option>
+      ).innerHTML += `<option value="${i}">${res.data[i].nombre}</option>
         `;
     }
   })
@@ -37,60 +38,39 @@ function editarCategoria() {
   let txticono = document.getElementById("descripcion").value;
 
   if (txtnombreCategoria && txticono) {
+    let categoria = {
+      id_categoria: categoriaActiva.id_categoria,
+      nombreCategoria: document.getElementById("nombre").value,
+      descripcion: categoriaActiva.descripcion,
+      cantidad_productos: categoriaActiva.cantidad_productos,
+      icono: document.getElementById("descripcion").value,
+    };
+
     axios({
       url:
-        "http://localhost/Backend-portalBD/api/productos.php?id=" +
-        (categoriaActiva.id - 1),
-      method: "get",
+        "http://localhost/Backend-portalBD/api/categorias.php?id=" +
+        categoriaActiva.id_categoria,
+      method: "put",
       responseType: "json",
+      data: categoria,
     })
       .then((res) => {
-        let productos = Array();
-        for (let i = 0; i < res.data.length; i++) {
-          productos.push({
-            id: res.data[i].id,
-            nombreProducto: res.data[i].nombreProducto,
-            imgProducto: res.data[i].imgProducto,
-            descripcion: res.data[i].descripcion,
-            precio: res.data[i].precio,
-          });
-        }
-        let categoria = {
-          id: categoriaActiva.id,
-          nombreCategoria: document.getElementById("nombre").value,
-          icono: document.getElementById("descripcion").value,
-          productos: productos,
-        };
-
-        axios({
-          url:
-            "http://localhost/Backend-portalBD/api/categorias.php?id=" +
-            (categoriaActiva.id - 1),
-          method: "put",
-          responseType: "json",
-          data: categoria,
-        })
-          .then((res) => {
-            console.log(res.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-
-        Swal.fire({
-          icon: "success",
-          title: "Agregado!",
-          text: "se ha agregado el producto correctamente",
-          showConfirmButton: false,
-          timer: 1500,
-        }).then((res) => {
-          vaciarSessionStorage();
-          window.location = "../html/adminCategories.html";
-        });
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
+
+    Swal.fire({
+      icon: "success",
+      title: "Agregado!",
+      text: "se ha actualizado la categoria correctamente",
+      showConfirmButton: false,
+      timer: 1500,
+    }).then((res) => {
+      vaciarSessionStorage();
+      window.location = "../html/adminCategories.html";
+    });
   } else {
     Swal.fire({
       icon: "error",
