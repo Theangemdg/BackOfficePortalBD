@@ -1,7 +1,7 @@
 function validarCampo() {
   let txtcorreo = document.getElementById("exampleInputEmail").value;
   let txtcontrasena = document.getElementById("exampleInputPassword").value;
-
+  console.log(txtcorreo + txtcontrasena)
   if (txtcorreo && txtcontrasena) {
     axios({
       url: "http://localhost/Backend-portalBD/api/administradores.php",
@@ -13,7 +13,7 @@ function validarCampo() {
         for (let i = 0; i < res.data.length; i++) {
           if (
             res.data[i].correo == txtcorreo &&
-            res.data[i].password == txtcontrasena
+            res.data[i].contraseña == txtcontrasena
           ) {
             sessionStorage.setItem(
               "Usuario activo",
