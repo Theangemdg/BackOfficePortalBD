@@ -9,3 +9,20 @@
 #accordionSidebar span{
     font-size: 15px;
 }
+
+#mes {
+    background: #4c4175;
+    border-radius: 8px;
+    margin-boton: 8px;
+    color: #f5f6fa;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 9rem;
+  }
+  
+  .mes .option {
+    height: 30px;
+    border-button: 8px;
+  }
