@@ -22,8 +22,8 @@ function llenarTablaEmpleados() {
                   <td>${res.data[i].id_tipoEmpleado}</td>
                   <td>${res.data[i].nombre}</td>
                   <td>${res.data[i].apellido}</td>
-                  <td>${res.data[i].telefono}</td>
                   <td>${res.data[i].edad}</td>
+                  <td>${res.data[i].telefono}</td>
                   <td>${res.data[i].correo}</td>
                   <td>${res.data[i].fechaDeContratacion}</td>
                   <td>
