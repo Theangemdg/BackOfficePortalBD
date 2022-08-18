@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
     <title>Portal-admin</title>
+
     <!-- Custom fonts for this template-->
     <link
       href="../vendor/fontawesome-free/css/all.min.css"
@@ -31,7 +38,8 @@
 
     <link href="../css/navigation.css" rel="stylesheet" />
   </head>
-  <body>
+
+  <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
       <!-- Sidebar -->
@@ -49,7 +57,7 @@
 
         <!-- Divider -->
         <hr class="sidebar-divider my-1" />
-        
+
         <!-- Nav Item - app clientes -->
         <li class="nav-item">
           <a
@@ -66,7 +74,7 @@
 
         <!-- Nav Item -->
         <li class="nav-item">
-          <a class="nav-link" href="../html/adminCategories.html">
+          <a class="nav-link" href="#">
             <i class="fas fa-tags"></i>
             <span>Administrar categorias</span>
           </a>
@@ -74,7 +82,7 @@
 
         <!-- Nav Item -->
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="../html/adminEmpleados.html">
             <i class="fas fa-motorcycle"></i>
             <span>Administrar empleados</span>
           </a>
@@ -111,6 +119,7 @@
             <span>Salir</span>
           </a>
         </li>
+
 
         <!-- Divider -->
         <hr class="sidebar-divider my-1 d-none d-md-block" />
@@ -157,23 +166,20 @@
             </ul>
           </nav>
           <!-- End of Topbar -->
-
+          <!-- DESDE AQUI ARMEN SUS QUERRYS-->
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- Page Heading -->
             <div
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
-              <h1 class="h3 mb-1 text-gray-800">Administrar empleados</h1>
-              <a href="../html/newEmpleado.html" class="btn btn-info shadow-sm"
-                >Nuevo empleado</a
-              >
+              <h1 class="h3 mb-1 text-gray-800">Reporte de frecuencia de uso de un tipo de pago</h1>
             </div>
 
             <!-- DataTales -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-info">Empleados</h6>
+                <h6 class="m-0 font-weight-bold text-info">Reporte</h6> <!--TITULO DE LA TABLA-->
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -185,31 +191,23 @@
                   >
                     <thead>
                       <tr>
-                        <th>Id</th>
-                        <th>Tipo de empleado</th>
-                        <th>Nombre del empleado</th>
-                        <th>Apellido del empleado</th>
-                        <th>Edad</th>
-                        <th>Telefono</th>
-                        <th>Correo</th>
-                        <th>Fecha de contratacion</th>
-                        <th>Opciones</th>
+                        <th>Id del usuario</th>
+                        <th>Nombre y apellido</th>
+                        <th>Tipo de pago</th>
+                        <th>Porcentaje</th>
+                        <th>NOTAS</th>
                       </tr>
                     </thead>
-                    <tbody id="bodyempleados">
+                    <tbody id="bodyreports">
                       <!--aqui se listan las categorias-->
                     </tbody>
                     <tfoot>
                       <tr>
-                        <th>Id</th>
-                        <th>Tipo de empleado</th>
-                        <th>Nombre del empleado</th>
-                        <th>Apellido del empleado</th>
-                        <th>Edad</th>
-                        <th>Telefono</th>
-                        <th>Correo</th>
-                        <th>Fecha de contratacion</th>
-                        <th>Opciones</th>
+                        <th>Id del usuario</th>
+                        <th>Nombre y apellido</th>
+                        <th>Tipo de pago</th>
+                        <th>Porcentaje</th>
+                        <th>NOTAS</th>
                       </tr>
                     </tfoot>
                   </table>
@@ -220,6 +218,7 @@
           <!-- /.container-fluid -->
         </div>
         <!-- End of Main Content -->
+        <!--AQUI FINALIZA SU QUERY-->
 
         <!-- Footer -->
         <footer class="sticky-footer bg-white">
@@ -291,7 +290,7 @@
     <!-- Custom scripts for all pages-->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="../js/controlador-empleados.js"></script>
+    <script src="../js/controlador-porcentajeReporte.js"></script> <!--CONTROLADOR QUERY-->
     <script src="../js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
