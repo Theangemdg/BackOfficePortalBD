@@ -27,7 +27,7 @@ function llenarTablaEmpleados() {
                   <td>${res.data[i].correo}</td>
                   <td>${res.data[i].fechaDeContratacion}</td>
                   <td>
-                  <a class="btn btn-info" href="../html/editareditarEmpleado.html" onclick="EmpleadoSeleccionado(${res.data[i].id_empleado})">
+                  <a class="btn btn-info" href="../html/editarEmpleado.html" onclick="EmpleadoSeleccionado(${res.data[i].id_empleado})">
                   <i class="fas fa-pen"></i>
                   </td>
               </tr>
