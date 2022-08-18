@@ -38,7 +38,6 @@ function llenarTablaCategories() {
 llenarTablaCategories();
 
 function categoriaSeleccionada(idCategoria) {
-  console.log(idCategoria)
   axios({
     url:
       "http://localhost/Backend-portalBD/api/categorias.php?id=" + idCategoria,
