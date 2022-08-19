@@ -102,7 +102,7 @@ function eliminarProducto(idproducto) {
 
           Swal.fire({
             icon: "success",
-            title: "Eliminada!",
+            title: "Eliminado!",
             text: "El producto ha sido eliminada",
             confirmButtonColor: "#4c4175",
           });
