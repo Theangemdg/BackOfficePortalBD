@@ -4,7 +4,7 @@ document.getElementById('userDropdown').innerHTML =
 `
 <span class="mr-2 d-none d-lg-inline text-gray-600 small">${clienteActivo.nombre}</span>
 <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
-`
+`;
 
 
 function llenarTablaEmpleados() {
@@ -27,7 +27,7 @@ function llenarTablaEmpleados() {
                   <td>${res.data[i].correo}</td>
                   <td>${res.data[i].fechaDeContratacion}</td>
                   <td>
-                  <a class="btn btn-info" href="../html/editarEmpleado.html" onclick="EmpleadoSeleccionado(${res.data[i].id_empleado})">
+                  <a class="btn btn-info" href="../html/editarEmpleado.html" onclick="empleadoSeleccionado(${res.data[i].id_empleado})">
                   <i class="fas fa-pen"></i>
                   </td>
               </tr>
@@ -44,3 +44,24 @@ function llenarTablaEmpleados() {
       });
   }
   llenarTablaEmpleados();
+
+  
+function empleadoSeleccionado(idEmpleado) {
+  console.log(idEmpleado)
+  axios({
+    url:
+      "http://localhost/Backend-portalBD/api/empleados.php?id=" + idEmpleado,
+    method: "get",
+    responseType: "json",
+  })
+    .then((res) => {
+      console.log(res.data)
+      sessionStorage.setItem(
+        "Empleado Seleccionado",
+        JSON.stringify(res.data)
+      );
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
