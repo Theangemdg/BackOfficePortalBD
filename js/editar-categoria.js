@@ -68,7 +68,6 @@ function editarCategoria() {
       showConfirmButton: false,
       timer: 1500,
     }).then((res) => {
-      vaciarSessionStorage();
       window.location = "../html/adminCategories.html";
     });
   } else {
@@ -81,6 +80,4 @@ function editarCategoria() {
   }
 }
 
-function vaciarSessionStorage() {
-  sessionStorage.setItem("Categoria Seleccionada", "");
-}
+
