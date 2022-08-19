@@ -16,23 +16,21 @@ function guardarProducto() {
 
   if (txtnombreProducto && txtimagen && txtprecio && txtdescripcion) {
     axios({
-      url:
-        "http://localhost/Backend-portalBD/api/productos.php?id=" +
-        (categoriaActiva.id - 1),
+      url: "http://localhost/Backend-portalBD/api/productos.php",
       method: "get",
       responseType: "json",
     }).then((res) => {
       let producto = {
-        id: res.data.length + 1,
-        nombreProducto: txtnombreProducto,
-        imgProducto: txtimagen,
+        id_producto: parseInt(res.data.ultimo_value) + 1,
+        nombre: txtnombreProducto,
         descripcion: txtdescripcion,
-        precio: txtprecio,
+        id_categoria: categoriaActiva.id_categoria,
+        precio: parseInt(txtprecio),
+        imagen: txtimagen,
+        estado: 1,
       };
       axios({
-        url:
-          "http://localhost/Backend-portalBD/api/productos.php?id=" +
-          (categoriaActiva.id - 1),
+        url: "http://localhost/Backend-portalBD/api/productos.php",
         method: "post",
         responseType: "json",
         data: producto,
