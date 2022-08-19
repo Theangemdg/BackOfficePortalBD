@@ -20,7 +20,7 @@ function llenarTablaCategories() {
                 <td><img src="${res.data[i].icono}" alt="" height="30px"></td>
                 <td>${res.data[i].nombreCategoria}</td>
                 <td>
-                    <a class="btn btn-info" href="../html/editarCategoria.html" onclick="categoriaSeleccionada(${res.data[i].id_categoria})">
+                    <a class="btn btn-info" href="#" onclick="categoriaSeleccionada(${res.data[i].id_categoria})">
                         <i class="fas fa-pen"></i>
                     </a>
                     <button class="btn btn-danger" onclick="eliminarCategoria(${res.data[i].id_categoria})">
@@ -50,6 +50,7 @@ function categoriaSeleccionada(idCategoria) {
         "Categoria Seleccionada",
         JSON.stringify(res.data)
       );
+      window.location = "../html/editarCategoria.html"
     })
     .catch((err) => {
       console.log(err);

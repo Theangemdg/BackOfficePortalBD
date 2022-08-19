@@ -12,7 +12,7 @@ function llenarTablaProductos() {
   axios({
     url:
       "http://localhost/Backend-portalBD/api/productos.php?id=" +
-      (categoriaActiva.id - 1),
+      (categoriaActiva.id_categoria),
     method: "get",
     responseType: "json",
   })
@@ -24,15 +24,15 @@ function llenarTablaProductos() {
             <tr>
                 <td>${i + 1}</td>
                 <td><img src="${
-                  res.data[i].imgProducto
+                  res.data[i].imagen
                 }" alt="" height="30px"></td>
-                <td>${res.data[i].nombreProducto}</td>
+                <td>${res.data[i].nombre}</td>
                 <td>$${res.data[i].precio}</td>
                 <td>
-                    <a class="btn btn-info" href="../html/editarProducto.html" onclick="productoSeleccionado('${i}')">
+                    <a class="btn btn-info" href="../html/editarProducto.html" onclick="productoSeleccionado('${res.data[i].id_producto}')">
                         <i class="fas fa-pen"></i>
                     </a>
-                    <button class="btn btn-danger" onclick="eliminarProducto('${i}')">
+                    <button class="btn btn-danger" onclick="eliminarProducto('${res.data[i].id_producto}')">
                         <i class="fas fa-trash-alt"></i>
                     </button>
                     <button
@@ -59,7 +59,7 @@ function productoSeleccionado(idproducto) {
   axios({
     url:
       "http://localhost/Backend-portalBD/api/productos.php?id=" +
-      (categoriaActiva.id - 1) +
+      (categoriaActiva.id_categoria) +
       "&idP=" +
       idproducto,
     method: "get",
@@ -91,14 +91,14 @@ function eliminarProducto(idproducto) {
       axios({
         url:
           "http://localhost/Backend-portalBD/api/productos.php?id=" +
-          (categoriaActiva.id - 1) +
+          (categoriaActiva.id_categoria) +
           "&idP=" +
           idproducto,
         method: "delete",
         responseType: "json",
       })
         .then((res) => {
-          llenarTablaEmpresas();
+          llenarTablaProductos();
 
           Swal.fire({
             icon: "success",
